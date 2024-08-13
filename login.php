@@ -11,11 +11,6 @@
     </style>
 </head>
 <body>
-    <?php
-        $_SESSION['username'] = "admin";
-        $_SESSION['role'] = 'a';
-        $_SESSION['id'] = session_id();
-    ?>
     <h1 class="center">Webboard Suisei</h1><hr>
     <table style="border: 2px solid black; width: 40%;" align="center">
         <tr><th style="background-color: #6CD2FE; text-align:left" colspan="2">เข้าสู่ระบบ</th></tr><br>

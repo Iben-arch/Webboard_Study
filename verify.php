@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +20,18 @@
     <h1>Webboard Suisei</h1><hr>
     <div>
         <?php
-        if($L == "admin" && $P == "ad1234")
+        if($L == "admin" && $P == "ad1234"){
+            $_SESSION['username'] = "admin";
+            $_SESSION['role'] = 'a';
+            $_SESSION['id'] = session_id();
             echo "ยินดีต้อนรับคุณ ADMIN";
-        elseif($L == "member" && $P == "mem1234")
+        }
+        elseif($L == "member" && $P == "mem1234"){
+            $_SESSION['username'] = 'member';
+            $_SESSION['role'] = 'm';
+            $_SESSION['id'] = session_id();
             echo "ยินดีต้อนรับคุณ MEMBER";
+        }
         else
             echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
         ?>
