@@ -41,9 +41,9 @@
                     <input type="text" name="Login" class="form-control">
                     <label for="Password" class="form-label">Password:</label>
                     <input type="password" name="Password" class="form-control">
-                    <div style="text-align: center;">
-                        <input type="submit" value="Login" class="btn btn-secondary mt-3">
-                        <a class="btn btn-secondary mt-3 ms-2" href="#" role="button">Reset</a>
+                    <div class="mt-3" style="text-align: center;">
+                        <input type="submit" value="Login" class="btn btn-success btn-sm">
+                        <input type="reset" class="btn btn-secondary btn-sm ms-2">
                     </div>
                 </form>
             </div>
