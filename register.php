@@ -15,26 +15,65 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 style="text-align: center;">สมัครสมาชิก</h1><br>
-    <div class="card text-bg-light m-auto mt-3" style="max-width: 35rem;">
-            <div class="card-header" style="background-color: #6CD2FE;">
-                กรอกสมาชิก
+    <div class="card text-bg-light m-auto mt-5" style="max-width: 45rem;">
+            <div class="card-header" style="background-color:#0d6efd;">
+                <label class="text-white">เข้าสู่ระบบ</label> 
             </div>
             <div class="card-body">
-                <form action="login.php" method="post">
-                    <label for="Login" class="form-label" name=>Account:</label>
-                    <input type="text" name="Login" class="form-control">
-                    <label for="Password" class="form-label">Password:</label>
-                    <input type="password" name="Password" class="form-control">
-                    <label for="Name" class="form-label">Name:</label>
-                    <input type="text" name="Name" class="form-control">
-                    <div class="mt-1">
-                        <input type="radio" name="gender" value="m" class="form-check-input">ชาย <br>
-                        <input type="radio" name="gender" value="f" class="form-check-input">หญิง <br>
-                        <input type="radio" name="gender" value="n" class="form-check-input">อื่นๆ
+                <form action="register_save.php" method="post">
+                    <div class="mb-3 row">
+                        <label for="login" class="col-sm-2 col-form-label">ชื่อบัญชี :</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="login">
+                        </div>
                     </div>
-                    <div class="mt-3" style="text-align: center;">
-                        <input type="submit" value="Register" class="btn btn-success btn-sm">
+                    <div class="mb-3 row">
+                        <label for="pwd" class="col-sm-2 col-form-label">รหัสผ่าน :</label>
+                        <div class="col-sm-10">
+                        <input type="password" class="form-control" name="pwd">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="name" class="col-sm-2 col-form-label">ชื่อ-นามสกุล :</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="name">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label for="gender" class="col-sm-2 col-form-label">เพศ :</label>
+                        <div class="col-sm-10">
+                            <div class="from-check">
+                                <input class="form-check-input" type="radio" name="gender" value="m">
+                                <label class="form-check-label" for="m">
+                                    ชาย
+                                </label>
+                            </div>
+                            <div class="from-check">
+                                <input class="form-check-input" type="radio" name="gender" value="f">
+                                <label class="form-check-label" for="f">
+                                    หญิง
+                                </label>
+                            </div>
+                            <div class="from-check">
+                                <input class="form-check-input" type="radio" name="gender" value="o">
+                                <label class="form-check-label" for="o">
+                                    อื่นๆ
+                                    </label>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="mb-3 row">
+                        <label for="email" class="col-sm-2 col-form-label">อีเมล :</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" name="email">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <!-- <a class="btn btn-primary btn-sm" href="#" role="button"><i class="bi bi-save"></i> สมัครสมาชิก</a> -->
+                            <button type="submit" class="btn btn-primary btn-sm"><a href="#"></a><i class="bi bi-save"></i> สมัครสมาชิก</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -55,6 +94,6 @@
         <td><input type="text" name="email"></td></tr><br>
         <tr><td colspan="2" align="center"><input type="submit" value="สมัครสมาชิก"></td></tr>
     </form></table><br> -->
-    <div style="text-align: center;"><a href="index.php" >กลับไปหน้าหลัก</a></div>
+    <!-- <div style="text-align: center;"><a href="index.php" >กลับไปหน้าหลัก</a></div> -->
 </body>
 </html>
