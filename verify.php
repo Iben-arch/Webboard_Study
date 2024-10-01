@@ -2,6 +2,7 @@
     session_start();
     if(isset($_SESSION['id'])){
         header("location:index.php");
+        die();
     }
 ?>
 <!DOCTYPE html>
@@ -15,20 +16,39 @@
     <?php
     $L = $_POST['Login'];
     $P = $_POST['Password'];
+    $login = $_POST['login'];
+    $pwd = $_POST['pwd'];
+
+    $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
+    $sql = "SELECT * FROM user where login='$login' and password='$pwd'";
+    $result = $conn->query($sql);
+    if($result->rowCount()==1){
+        $data=$result->fetch(PDO::FETCH_ASSOC);
+        $_SESSION['username']=$data['login'];
+        $_SESSION['role']=$data['role'];
+        $_SESSION['user_id']=$data['id'];
+        $_SESSION['id']=$_SESSION_id();
+        header("location:index.php");
+        die();
+    }else{
+        $_SESSION['Error']="error";
+        header("location:login.php");
+        die();
+    }
     // echo"Webboard Suisei"."<HR>";
     // echo"เข้าสู่ระบบด้วย"."<BR>";
     // echo"Login = $L"."<BR>";
     // echo"Password = $P"."<BR>";
+    $conn = null;
     ?>
-    <div>
-        <?php
+        <!-- <?php
         if($L == "admin" && $P == "ad1234"){
             $_SESSION['username'] = "admin";
             $_SESSION['role'] = 'a';
             $_SESSION['id'] = session_id();
             header("location:index.php");
         }
-        elseif($L == "member" && $P == "mem1234"){
+        elseif($L == $result['login'] && $P == $result['password']){
             $_SESSION['username'] = 'member';
             $_SESSION['role'] = 'm';
             $_SESSION['id'] = session_id();
@@ -38,6 +58,6 @@
             $_SESSION['Error'] = 1;
             header("location:login.php");
         }
-        ?>
+        ?> -->
 </body>
 </html>
