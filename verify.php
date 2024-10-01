@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify</title>
 </head>
-<body style="text-align: center;">
+<body>
     <?php
     $L = $_POST['Login'];
     $P = $_POST['Password'];
@@ -20,7 +20,6 @@
     // echo"Login = $L"."<BR>";
     // echo"Password = $P"."<BR>";
     ?>
-    <h1>Webboard Suisei</h1><hr>
     <div>
         <?php
         if($L == "admin" && $P == "ad1234"){
@@ -40,7 +39,5 @@
             header("location:login.php");
         }
         ?>
-    </div><br>
-    <div style="text-align: center;"><a href="index.php" >กลับไปหน้าหลัก</a></div>
 </body>
 </html>
