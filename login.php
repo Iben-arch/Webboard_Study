@@ -43,7 +43,7 @@
                     <input type="password" name="Password" class="form-control">
                     <div class="mt-3" style="text-align: center;">
                         <input type="submit" value="Login" class="btn btn-success btn-sm">
-                        <input type="reset" class="btn btn-secondary btn-sm ms-2">
+                        <input type="reset" class="btn btn-danger btn-sm ms-2">
                     </div>
                 </form>
             </div>
