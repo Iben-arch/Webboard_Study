@@ -24,38 +24,38 @@
                     <div class="mb-3 row">
                         <label for="login" class="col-sm-2 col-form-label">ชื่อบัญชี :</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" name="login">
+                        <input type="text" class="form-control" name="login" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="pwd" class="col-sm-2 col-form-label">รหัสผ่าน :</label>
                         <div class="col-sm-10">
-                        <input type="password" class="form-control" name="pwd">
+                        <input type="password" class="form-control" name="pwd" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="name" class="col-sm-2 col-form-label">ชื่อ-นามสกุล :</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" name="name">
+                        <input type="text" class="form-control" name="name" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="gender" class="col-sm-2 col-form-label">เพศ :</label>
                         <div class="col-sm-10">
                             <div class="from-check">
-                                <input class="form-check-input" type="radio" name="gender" value="m">
+                                <input class="form-check-input" type="radio" name="gender" value="m" required>
                                 <label class="form-check-label" for="m">
                                     ชาย
                                 </label>
                             </div>
                             <div class="from-check">
-                                <input class="form-check-input" type="radio" name="gender" value="f">
+                                <input class="form-check-input" type="radio" name="gender" value="f" required>
                                 <label class="form-check-label" for="f">
                                     หญิง
                                 </label>
                             </div>
                             <div class="from-check">
-                                <input class="form-check-input" type="radio" name="gender" value="o">
+                                <input class="form-check-input" type="radio" name="gender" value="o" required>
                                 <label class="form-check-label" for="o">
                                     อื่นๆ
                                     </label>
@@ -65,14 +65,14 @@
                     <div class="mb-3 row">
                         <label for="email" class="col-sm-2 col-form-label">อีเมล :</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" name="email">
+                        <input type="text" class="form-control" name="email" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-10">
                             <!-- <a class="btn btn-primary btn-sm" href="#" role="button"><i class="bi bi-save"></i> สมัครสมาชิก</a> -->
-                            <button type="submit" class="btn btn-primary btn-sm"><a href="#"></a><i class="bi bi-save"></i> สมัครสมาชิก</button>
+                            <button type="submit" class="btn btn-primary btn-sm" required><a href="#"></a><i class="bi bi-save"></i> สมัครสมาชิก</button>
                         </div>
                     </div>
                 </form>
