@@ -72,7 +72,7 @@
                         <label class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-10">
                             <!-- <a class="btn btn-primary btn-sm" href="#" role="button"><i class="bi bi-save"></i> สมัครสมาชิก</a> -->
-                            <button type="submit" class="btn btn-primary btn-sm" required><a href="#"></a><i class="bi bi-save"></i> สมัครสมาชิก</button>
+                            <button type="submit" class="btn btn-primary btn-sm" required><i class="bi bi-save"></i> สมัครสมาชิก</button>
                         </div>
                     </div>
                 </form>
