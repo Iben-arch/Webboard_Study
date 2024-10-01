@@ -15,6 +15,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class=" row">
+        <div class=" col-lg-3"></div>
+        <div class=" col-lg-6">
+            <?php
+                if(isset($_SESSION['add_login'])){
+                    if($_SESSION['add_login']=='error'){
+                        echo "<div class=' alert alert-danger'>
+                            ชื่อบัญชีซ้ำหรือฐานข้อมูลมีปัญหา</div>";
+                    }else{
+                        echo "<div class=' alert alert-success'>เพิ่มบัญชีเรียบร้อย</div>";
+                    }
+                    unset($_SESSION['add_login']);
+                }
+            ?>
+        </div>
+    </div>
+
     <div class="card text-bg-light m-auto mt-5" style="max-width: 45rem;">
             <div class="card-header" style="background-color:#0d6efd;">
                 <label class="text-white">เข้าสู่ระบบ</label> 

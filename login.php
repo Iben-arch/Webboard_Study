@@ -20,13 +20,11 @@
     ?>
     <br>
     <?php
-        if(isset($_SESSION['Error'])){
-            if($_SESSION['Error'] == 1){
+        if(isset($_SESSION['error'])){
                 echo "<div class='alert alert-danger m-auto mt-3' role='alert' style='max-width: 25rem;'>
                         ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง
                     </div>" ;
-                $_SESSION['Error'] = 0;
-            }
+                unset($_SESSION['error']);
         }
     ?>
     
