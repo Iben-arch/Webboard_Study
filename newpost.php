@@ -19,7 +19,7 @@
         include "nav.php";
     ?>
 
-    <div class=" card text-dark bg-white border-info mt-4 m-auto" style="max-width: 40rem;">
+<div class=" card text-dark bg-white border-info mt-4 m-auto" style="max-width: 40rem;">
         <div class=" card-header bg-info text-white">ตั้งกระทู้ใหม่</div>
         <div class=" card-body">
             <form action="newpost_save.php" method="post">
@@ -27,13 +27,11 @@
                     <label class=" col-lg-3 col-form-label">หมวดหมู่ :</label>
                     <div class=" col-lg-9">
                         <select name="category" class=" form-select">
-                            <!-- <option value="general">ข่าวสารทั่วไป</option>
-                            <option value="music">สตรีม</option> -->
                             <?php
                                 $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
                                 $sql = "SELECT * FROM category";
                                 foreach($conn->query($sql) as $row){
-                                    echo "<option> value=".$row['id'].">".$row['name']."</option>";
+                                    echo "<option value=".$row['id'].">".$row['name']."</option>";
                                 }
                                 $conn=null;
                             ?>

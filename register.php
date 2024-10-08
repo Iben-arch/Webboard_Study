@@ -21,10 +21,10 @@
             <?php
                 if(isset($_SESSION['add_login'])){
                     if($_SESSION['add_login']=='error'){
-                        echo "<div class=' alert alert-danger'>
+                        echo "<div class=' alert alert-danger mt-4'>
                             ชื่อบัญชีซ้ำหรือฐานข้อมูลมีปัญหา</div>";
                     }else{
-                        echo "<div class=' alert alert-success'>เพิ่มบัญชีเรียบร้อย</div>";
+                        echo "<div class=' alert alert-success mt-4'>เพิ่มบัญชีเรียบร้อย</div>";
                     }
                     unset($_SESSION['add_login']);
                 }
@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <div class="card text-bg-light m-auto mt-5" style="max-width: 45rem;">
+    <div class="card text-bg-light m-auto mt-3" style="max-width: 45rem;">
             <div class="card-header" style="background-color:#0d6efd;">
                 <label class="text-white">เข้าสู่ระบบ</label> 
             </div>

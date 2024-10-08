@@ -36,9 +36,9 @@
             <div class="card-body">
                 <form action="verify.php" method="post">
                     <label for="Login" class="form-label" name=>Login:</label>
-                    <input type="text" name="Login" class="form-control">
+                    <input type="text" name="login" class="form-control">
                     <label for="Password" class="form-label">Password:</label>
-                    <input type="password" name="Password" class="form-control">
+                    <input type="password" name="pwd" class="form-control">
                     <div class="mt-3" style="text-align: center;">
                         <input type="submit" value="Login" class="btn btn-success btn-sm">
                         <input type="reset" class="btn btn-danger btn-sm ms-2">

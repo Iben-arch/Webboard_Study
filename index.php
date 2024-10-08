@@ -43,7 +43,7 @@
                 --ทั้งหมด--
             </a>
             <ul class="dropdown-menu" aria-labelledby="Button2">
-                <li><a href="#" class=" dropdown-item">ทั้งหมด</a></li>
+                <li><a href="#" class=" dropdown-item"></a></li>
                 <?php
                     $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
                     $sql = "SELECT * FROM category";
@@ -52,9 +52,6 @@
                     }
                     $conn=null;
                 ?>
-                <!-- <li><a class="dropdown-item" href="#">ข่าวสารทั่วไป</a></li>
-                <li><a class="dropdown-item" href="#">เพลง</a></li>
-                <li><a class="dropdown-item" href="#">คอนเสิร์ต</a></li> -->
             </ul>
             <span class="d-inline-flex gap-1" style="float: right;">
                 <?php 
@@ -75,60 +72,8 @@
                     echo "<tr><td>[$row[0]] <a href=post.php?id=$row[2] style=text-decoration:none>$row[1]</a><br>$row[3] - $row[4]</td></tr>"; 
                 }
                 $conn=null;
-                // if(!isset($_SESSION['id'])){
-                //     for($i=1;$i<=6;$i++){
-                //         echo "<tr><td><a class='link-underline link-underline-opacity-0' href='post.php?id=$i'>กระทู้ที่ $i</a></td></tr>";
-                //     }
-                // }elseif($_SESSION['role'] == "a"){
-                //     for($i=1;$i<=6;$i++){
-                //         echo "<tr class='m-2'><td><a class='link-underline link-underline-opacity-0' href='post.php?id=$i'>กระทู้ที่ $i</a><span class='me-4' style='float: right'><a class='btn btn-danger' href='delete.php?id=$i' role='button'><i class='bi bi-x-octagon'></i></a></span></td></tr>";
-                //     }
-                // }else{
-                //     for($i=1;$i<=6;$i++){
-                //         echo "<tr><td><a class='link-underline link-underline-opacity-0' href='post.php?id=$i'>กระทู้ที่ $i</a></td></tr>";
-                //     }
-                // }
             ?>
         </table>
-        <!-- <div class="mb-3">
-            <form>
-                <label for="story" class="form-label"><b>หมวดหมู่ : </b></label>
-                <select name="story" class="from-select">
-                    <option value="All">--ทั้งหมด--</option>
-                    <option value="normal">ข่าวสารทั่วไป</option>
-                    <option value="music">เพลง</option>
-                    <option value="concert">คอนเสิร์ต</option>
-                    <option value="stream">สตรีม</option>
-        </select> 
-        </div> -->
-        <!-- <?php
-            if(!isset($_SESSION['id'])){
-                echo "<a href='login.php' style='float: right;'>เข้าสู่ระบบ</a>";
-            }else{
-                echo "<span style='float: right;'>ผู้ใช้งานระบบ : $_SESSION[username]&nbsp;
-                <a href='logout.php'>ออกจากระบบ</a>
-                </span>";
-                echo "<br><a href='newpost.php'>สร้างกระทู้ใหม่</a>";
-            }
-        ?> -->
-        </form><br>
-    <!-- <ul>
-        <?php
-        if(!isset($_SESSION['id'])){
-            for($i=1;$i<=10;$i++){
-                echo "<li><a href='post.php?id=$i'>กระทู้ที่ $i</a><BR></li>";
-            }
-        }elseif($_SESSION['role'] == "a"){
-            for($i=1;$i<=10;$i++){
-                echo "<li><a href='post.php?id=$i'>กระทู้ที่ $i</a>&nbsp&nbsp<a href='delete.php?id=$i'>ลบ</a><BR></li>";
-            }
-        }else{
-            for($i=1;$i<=10;$i++){
-                echo "<li><a href='post.php?id=$i'>กระทู้ที่ $i</a><BR></li>";
-            }
-        }
-        ?>
-    </ul> -->
     </div>
 </body>
 </html>
