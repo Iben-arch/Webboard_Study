@@ -19,7 +19,7 @@
         include "nav.php";
     ?>
 
-<div class=" card text-dark bg-white border-info mt-4 m-auto" style="max-width: 40rem;">
+<div class="card text-dark bg-white border-info mt-4 m-auto" style="max-width: 40rem;">
         <div class=" card-header bg-info text-white">ตั้งกระทู้ใหม่</div>
         <div class=" card-body">
             <form action="newpost_save.php" method="post">
