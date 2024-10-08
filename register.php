@@ -19,6 +19,7 @@
         <div class=" col-lg-3"></div>
         <div class=" col-lg-6">
             <?php
+                include "nav.php";
                 if(isset($_SESSION['add_login'])){
                     if($_SESSION['add_login']=='error'){
                         echo "<div class=' alert alert-danger mt-4'>
@@ -32,10 +33,8 @@
         </div>
     </div>
 
-    <div class="card text-bg-light m-auto mt-3" style="max-width: 45rem;">
-            <div class="card-header" style="background-color:#0d6efd;">
-                <label class="text-white">เข้าสู่ระบบ</label> 
-            </div>
+    <div class="card border-primary m-auto mt-3" style="max-width: 45rem;">
+            <div class="card-header bg-primary text-white">เข้าสู่ระบบ</div>
             <div class="card-body">
                 <form action="register_save.php" method="post">
                     <div class="mb-3 row">
