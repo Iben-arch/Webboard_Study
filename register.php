@@ -15,11 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php
+    include "nav.php";
+    ?>
     <div class=" row">
         <div class=" col-lg-3"></div>
         <div class=" col-lg-6">
             <?php
-                include "nav.php";
                 if(isset($_SESSION['add_login'])){
                     if($_SESSION['add_login']=='error'){
                         echo "<div class=' alert alert-danger mt-4'>
