@@ -12,11 +12,11 @@
     if($result->rowCount()==1){
         $_SESSION['add_login'] = "error";
     }else{
-        $sql1 = "INSERT INTO user (login, password, name, gender, email, role) 
-        VALUES('$login', '$passwd', '$name', '$gender', '$email', 'm')";
-        $conn->exec($sql1);
-        $_SESSION['add_login']="success";
-    } 
+            $sql1 = "INSERT INTO user (login, password, name, gender, email, role) 
+            VALUES('$login', '$passwd', '$name', '$gender', '$email', 'm')";
+            $conn->exec($sql1);
+            $_SESSION['add_login']="success";
+    }
     $conn = null;
     header("location:register.php");
     die();
