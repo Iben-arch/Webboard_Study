@@ -11,14 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Member</title>
     <script>
-        function myfunction(){
-            let password = document.getElementById("pwd").value;
-            let conpwd = document.getElementById("confirm").value;
-            if(password != conpwd){
+        function myFunction(){
+            let password = document.getElementById("pwd");
+            let conpwd = document.getElementById("confirm");
+            let pass_value = password.value;
+            let con_value = conpwd.value;
+            if(pass_value != con_value){
                 alert("รหัสผ่านทั้งสองช่องไม่ตรงกัน");
-                return false;
+                password.value="";
+                conpwd.value="";
             }
-            return true;
         }
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -47,7 +49,7 @@
     </div>
 
     <div class="card border-primary m-auto mt-3" style="max-width: 45rem;">
-            <div class="card-header bg-primary text-white">เข้าสู่ระบบ</div>
+            <div class="card-header bg-primary text-white">สมัครสมาชิก</div>
             <div class="card-body">
                 <form action="register_save.php" method="post">
                     <div class="mb-3 row">
@@ -65,7 +67,7 @@
                     <div class="mb-3 row">
                         <label for="confirm" class="col-sm-2 col-form-label">ใส่รหัสผ่านซ้ำ:</label>
                         <div class="col-sm-10">
-                        <input type="password" class="form-control" name="confirm" id="confirm" required>
+                        <input type="password" class="form-control" name="confirm" id="confirm" onblur="myFunction()" required>
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -107,7 +109,7 @@
                         <label class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-10">
                             <!-- <a class="btn btn-primary btn-sm" href="#" role="button"><i class="bi bi-save"></i> สมัครสมาชิก</a> -->
-                            <button type="submit" class="btn btn-primary btn-sm" onclick="return myfunction()" required><i class="bi bi-save"></i> สมัครสมาชิก</button>
+                            <button type="submit" class="btn btn-primary btn-sm"  required><i class="bi bi-save"></i> สมัครสมาชิก</button>
                         </div>
                     </div>
                 </form>

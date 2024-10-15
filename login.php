@@ -10,6 +10,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Webboard</title>
+    <script>
+        function Show_pwd(){
+            let pwdInput = document.getElementById("pwd");
+            let showIcon = document.getElementById("icon");
+
+            if(pwdInput.type == "password"){
+                pwdInput.type = "text";
+                showIcon.classList.remove("bi-eye-fill");
+                showIcon.classList.add("bi-eye-slash-fill");
+            }else{
+                pwdInput.type = "password";
+                showIcon.classList.remove("bi-eye-slash-fill");
+                showIcon.classList.add("bi-eye-fill");
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -38,7 +54,10 @@
                     <label for="Login" class="form-label" name=>Login:</label>
                     <input type="text" name="login" class="form-control">
                     <label for="Password" class="form-label">Password:</label>
-                    <input type="password" name="pwd" class="form-control">
+                    <div class="input-group">
+                        <input type="password" name="pwd" id="pwd" class="form-control">
+                        <button class="btn btn-outline-secondary" type="button" onclick="Show_pwd()"><i id="icon" class="bi bi-eye-fill"></i></button>
+                    </div>
                     <div class="mt-3" style="text-align: center;">
                         <input type="submit" value="Login" class="btn btn-success btn-sm">
                         <input type="reset" class="btn btn-danger btn-sm ms-2">
