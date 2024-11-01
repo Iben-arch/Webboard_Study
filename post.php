@@ -39,38 +39,42 @@
                 $result = $conn->query($sql1);
                 $i=1;
                     while($row = $result->fetch()){
+                        if ($row[3] != 'b'){
                         echo "<div class='card text-dark bg-white border-primary mt-3'>
                                 <div class='card-header bg-primary text-white'>ความคิดเห็นที่ $i</div>
                                 <div class='card-body'>$row[1]</div>
                                 <div class='card-footer'>[$row[2]]-$row[3]</div>
                                 </div>";
-                        $i++;
+                        $i++;}
                         }
                         $conn=null;
-                    ?>
-            <div class=" card text-dark bg-white border-success m-auto mt-3" style="max-width: 50rem;">
-                <div class=" card-header bg-success text-white">แสดงความคิดเห็น</div>
-                <div class=" card-body">
-                    <form action="post_save.php" method="post">
-                    <input type="hidden" name="post_id" value="<?= $_GET['id']; ?>">
-                        <div class=" row mb-3 justify-content-center">
-                            <div class=" col-lg-10">
-                                <textarea name="comment" class=" form-control" rows="8"></textarea>
+                    
+            if ($_SESSION['role'] != 'b'){
+                echo "<div class='card text-dark bg-white border-success m-auto mt-3' style='max-width: 50rem;'>
+                    <div class='card-header bg-success text-white'>แสดงความคิดเห็น</div>
+                    <div class='card-body'>
+                        <form action='post_save.php' method='post'>
+                        <input type='hidden' name='post_id' value='<?= $_GET[id]; ?>'>
+                            <div class='row mb-3 justify-content-center'>
+                                <div class='col-lg-10'>
+                                    <textarea name='comment' class='form-control' rows='8'></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class=" col-lg-12">
-                                <center>
-                                    <button type="submit" class=" btn btn-success btn-sm text-white">
-                                        <i class="bi bi-box-arrow-up-right me-1"></i>ส่งข้อความ
-                                    </button>
-                                </center>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <center>
+                                        <button type='submit' class='btn btn-success btn-sm text-white'>
+                                            <i class='bi bi-box-arrow-up-right me-1'></i>ส่งข้อความ
+                                        </button>
+                                    </center>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div>";               
+        }
+        ?>
     </div>
     <!--
     <div class="card border-primary mt-4 m-auto" style="max-width: 30rem;">
