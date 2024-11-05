@@ -54,7 +54,7 @@
             </ul>
             <span class="d-inline-flex gap-1" style="float: right;">
                 <?php 
-                    if(isset($_SESSION['id'])){
+                    if(isset($_SESSION['id']) && $_SESSION['role'] != "b"){
                         echo "<a class='btn btn-success' href='newpost.php' role='button'><i class='bi bi-plus'></i>สร้างกระทู้ใหม่</a>";
                     }
                 ?>
@@ -65,9 +65,9 @@
             <?php
                 $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
                 $sql = "SELECT category.name,post.title,post.id,user.login,post.post_date,category.id,post.user_id FROM post INNER JOIN user ON (post.user_id=user.id)
-                INNER JOIN category ON (post.cat_id=category.id)";
+                INNER JOIN category ON (post.cat_id=category.id) WHERE user.role != 'b' ";
                 if (isset($_GET['cat_id']) && $_GET['cat_id'] != 0) {
-                    $sql .= " WHERE post.cat_id = :cat_id";
+                    $sql .= " && post.cat_id = :cat_id";
                 }
                 $sql .= " ORDER BY post.post_date DESC";
         
@@ -82,7 +82,7 @@
                 while($row = $stmt->fetch()){
                         echo "<tr><td class = 'd-flex justify-content-between'><div>[$row[0]] <a href=post.php?id=$row[2] style=text-decoration:none>$row[1]</a>
                         <br>$row[3] - $row[4]</div>";
-                        if (isset($_SESSION['id'])) {
+                        if (isset($_SESSION['id']) && $_SESSION['role'] != "b") {
                             if ($_SESSION['user_id'] == $row[6] || $_SESSION['role'] == 'a') {
                                 // ปุ่มแก้ไข
                                 if ($_SESSION['user_id'] == $row[6]) {

@@ -51,9 +51,9 @@ session_start();
                 <div class="col-sm-10 col-md-8 col-lg-7 mx-auto">
                     <table class="table table-striped">
                             <tr>
-                                <td class="text-start">&nbsp;&nbsp;<b>ลำดับ</b></td>
+                                <td class="text-center"><b>ลำดับ</b></td>
                                 <td class="text-center"><b>ชื่อหมวดหมู่</b></td>
-                                <td class="text-end"><b>จัดการ</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td class="text-center"><b>จัดการ</b></td>
                             </tr>
                         <?php
                             $conn=new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root", "");
@@ -62,9 +62,9 @@ session_start();
                             $i=1;
                             while($row = $result->fetch()){
                                 echo "<tr>
-                                    <td class='text-start'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$i</td>
+                                    <td class='text-center'>$i</td>
                                     <td class='text-center'>$row[1]</td>
-                                    <td class='text-end'>
+                                    <td class='text-center'>
                                         <a class='btn btn-warning' role='button' data-bs-toggle='modal' data-bs-target='#editModal' data-value-catID='$row[0]' data-value-name='$row[1]' onclick='setModalContent(this)'>
                                             <i class='bi bi-pencil-fill'></i>
                                         </a>
