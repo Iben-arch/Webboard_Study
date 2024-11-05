@@ -34,13 +34,13 @@ session_start();
                 <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
                         <table class="table table-striped w-100">
                                 <tr>
-                                    <td class="text-start" style="width: 5%;"><b>ลำดับ</b></td>
+                                    <td class="text-center" style="width: 5%;"><b>ลำดับ</b></td>
                                     <td class="text-center" style="width: 20%;"><b>ชื่อผู้ใช้</b></td>
                                     <td class="text-center" style="width: 25%;"><b>ชื่อ-นามสกุล</b></td>
                                     <td class="text-center" style="width: 5%;"><b>เพศ</b></td>
                                     <td class="text-center" style="width: 25%;"><b>อีเมล</b></td>
                                     <td class="text-center" style="width: 5%;"><b>สิทธิ์</b></td>
-                                    <td class="text-end" style="width: 15%;"><b>จัดการ</b></td>
+                                    <td class="text-center" style="width: 15%;"><b>จัดการ</b></td>
                                 </tr>
                             <?php
                                 $conn=new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root", "");
