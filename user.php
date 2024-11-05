@@ -50,13 +50,13 @@ session_start();
                                 while($row = $result->fetch()){
                                     $rowData = json_encode($row);
                                     echo "<tr>
-                                        <td class='text-start'>&nbsp;&nbsp;&nbsp;$i</td>
+                                        <td class='text-center'>$i</td>
                                         <td class='text-center'>$row[1]</td>
                                         <td class='text-center'>$row[2]</td>
                                         <td class='text-center'>$row[3]</td>
                                         <td class='text-center'>$row[4]</td>
                                         <td class='text-center'>$row[5]</td>
-                                        <td class='text-end'>
+                                        <td class='text-center'>
                                             <a class='btn btn-warning' role='button' data-bs-toggle='modal' data-bs-target='#editModal' data-value-raw='$rowData' onclick='setModalData(this)'>
                                                 <i class='bi bi-pencil-fill'></i>
                                             </a>
