@@ -49,7 +49,7 @@
                         }
                         $conn=null;
                     
-            if ($_SESSION['role'] != 'b'){
+            if (isset($_SESSION['id']) && $_SESSION['role'] != 'b'){
                 echo "<div class='card text-dark bg-white border-success m-auto mt-3' style='max-width: 50rem;'>
                     <div class='card-header bg-success text-white'>แสดงความคิดเห็น</div>
                     <div class='card-body'>
